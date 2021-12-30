@@ -1,17 +1,21 @@
 {
-	"name": "NorthstarMasterServer",
-	"author": "BobTheBob#1150",
-	"license": "MIT",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"dev": "node index.js -devenv"
-	},
-	"dependencies": {
-		"bad-words": "^3.0.4",
-		"dotenv": "^10.0.0",
-		"fastify": "^3.24.0",
-		"fastify-multipart": "^5.1.0",
-		"sqlite3": "^5.0.2"
-	}
+  "name": "northstarmasterserver",
+  "author": "BobTheBob#1150",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js -devenv",
+    "rs": "pm2 restart NorthstarMaster",
+    "rslog": "pm2 restart NorthstarMaster && pm2 logs NorthstarMaster",
+    "stop": "pm2 stop NorthstarMaster",
+    "push": "git add . && git commit -m \"$msg\" && git push -u origin main"
+  },
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "dotenv": "^10.0.0",
+    "fastify": "^3.24.0",
+    "fastify-multipart": "^5.1.0",
+    "sqlite3": "^5.0.2"
+  }
 }
