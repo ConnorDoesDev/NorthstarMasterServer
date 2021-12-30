@@ -8,6 +8,7 @@
     "dev": "node index.js -devenv",
     "rs": "pm2 restart NorthstarMaster",
     "rslog": "pm2 restart NorthstarMaster && pm2 logs NorthstarMaster",
+    "logs": "pm2 logs NorthstarMaster",
     "stop": "pm2 stop NorthstarMaster",
     "push": "git add . && git commit -m \"$msg\" && git push -u origin main"
   },
